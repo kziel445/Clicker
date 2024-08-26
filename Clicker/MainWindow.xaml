@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Współrzędne:" HorizontalAlignment="Left" Margin="32,37,0,0" VerticalAlignment="Top" Height="28" Width="85"/>
-        <Label Content="X:Y:Z" HorizontalAlignment="Left" Margin="32,70,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="Coordinates" Content="X:Y:Z" HorizontalAlignment="Left" Margin="32,70,0,0" VerticalAlignment="Top" Width="128"/>
 
     </Grid>
 </Window>
