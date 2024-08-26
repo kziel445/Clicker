@@ -30,5 +30,10 @@ namespace Clicker
             //
             LabelController.ShowInLabel(Coordinates, ShowPointerPosition.MousePosition().ToString());
         }
+
+        private void Get_Cursor_Position_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonController.Get_Cursor_Position_OnClick(Coordinates);
+        }
     }
 }
