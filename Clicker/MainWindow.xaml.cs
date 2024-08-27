@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Clicker.API;
+using Clicker.Tools;
+
 
 namespace Clicker
 {
@@ -23,6 +26,14 @@ namespace Clicker
         public MainWindow()
         {
             InitializeComponent();
+
+            //
+            LabelController.ShowInLabel(Coordinates, ShowPointerPosition.MousePosition().ToString());
+        }
+
+        private void Get_Cursor_Position_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonController.Get_Cursor_Position_OnClick(Coordinates);
         }
     }
 }
