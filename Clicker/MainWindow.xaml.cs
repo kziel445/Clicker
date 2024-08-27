@@ -27,6 +27,8 @@ namespace Clicker
         {
             InitializeComponent();
 
+            // register KeyDown
+            this.KeyDown += OnKeyDownHandler;
             //
             LabelController.ShowInLabel(Coordinates, ShowPointerPosition.MousePosition().ToString());
         }
@@ -34,6 +36,14 @@ namespace Clicker
         private void Get_Cursor_Position_Click(object sender, RoutedEventArgs e)
         {
             ButtonController.Get_Cursor_Position_OnClick(Coordinates);
+        }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.R && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control) 
+            {
+                MessageBox.Show("Ctrl + R was pressed!");
+            }
         }
     }
 }
